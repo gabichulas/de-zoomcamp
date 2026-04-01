@@ -83,6 +83,19 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+
+  # Dedicated database for storing the NYC Taxi pipeline data
+  data_warehouse_postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ny_taxi
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./warehouse_data:/var/lib/postgresql/data
+
   postgres:
     image: postgres:13
     environment:
