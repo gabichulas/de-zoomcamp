@@ -10,7 +10,7 @@ variable "bq_dataset_name" {
 
 variable "gcs_bucket_name" {
   description = "My GCS Bucket dataset name"
-  default     = "demo-bucket"
+  default     = "project-ad6a13b6-36d6-4a7b-b67-demo-bucket"
 }
 
 variable "gcs_class" {

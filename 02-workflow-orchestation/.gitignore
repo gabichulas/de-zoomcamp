@@ -302,3 +302,7 @@ dev/registry/providers.json
 
 
 *.csv.gz
+
+warehouse_data/
+
+gcp_credentials.json
